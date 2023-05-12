@@ -4,7 +4,7 @@ import pandas as pd
 import random
 
 def getcampactivities(campground_id):
-  headers = {'Content-type': 'application/json', "apikey": "f5e1e19c-fb0f-4585-b080-09b688d535eb"} 
+  headers = {'Content-type': 'application/json', "apikey": "************************"} 
   r = requests.get(f'https://ridb.recreation.gov/api/v1/facilities/{campground_id}/activities?limit=10&offset=0', headers = headers)
   data = r.json()
   activities = set()
@@ -70,7 +70,7 @@ def getcampsitedata(campground_id):
   return num_of_sites, site_types, amenity_list
 
 def sorted_activities():
-    headers = {'Content-type': 'application/json', "apikey": "f5e1e19c-fb0f-4585-b080-09b688d535eb"} 
+    headers = {'Content-type': 'application/json', "apikey": "********************"} 
     r = requests.get('https://ridb.recreation.gov/api/v1/activities?limit=300&offset=0', headers = headers)
     data = r.json()
 
@@ -96,7 +96,7 @@ def sorted_activities():
     return activities_dict
 
 def get_facilites_by_rec_area(area_id):
-  headers = {'Content-type': 'application/json', "apikey": "f5e1e19c-fb0f-4585-b080-09b688d535eb"} 
+  headers = {'Content-type': 'application/json', "apikey": "***********************"} 
   r = requests.get(f'https://ridb.recreation.gov/api/v1/recareas/{area_id}/facilities?limit=1000&offset=0', headers = headers)
   data = r.json()
   for thing in data["RECDATA"]:
